@@ -1,24 +1,31 @@
-import React from 'react';
+import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import User from './component/User';
+import User2 from './component/User2';
 
 function App() {
+
+  const [count,setCount] = useState<number>(0)
+  
+  const handleCount =():void=>{
+    setCount(count+1)
+  }
+  const clickHandler = ()=>{
+
+  }
+  
+
+  const firstUser = {
+    name:"Afridi",
+    age:23
+  }
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>{count}</h1>
+      <User2 name="Saad"></User2>
+      <User firstUser = {firstUser} count = {count} setCounter={handleCount}></User>
     </div>
   );
 }

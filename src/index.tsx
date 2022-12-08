@@ -4,6 +4,24 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
+
+let a:number = 23
+
+console.log(a);
+
+interface Person {
+name:string;
+job?:string;
+age:number;
+}
+
+const b :Person ={
+  name:"Afridi",
+  // job:"Student",
+  age:23
+}
+console.log(b)
+
 const root = ReactDOM.createRoot(
   document.getElementById('root') as HTMLElement
 );
