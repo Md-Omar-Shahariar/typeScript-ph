@@ -1,9 +1,17 @@
 import React from 'react';
+import UserModel from './UserModel';
 
-const User2 = (props:{name:string}) => {
+interface Props {
+    user:UserModel;
+    addUser: ()=>void
+}
+
+const User2 = ({user, addUser}:Props) => {
+    console.log(user)
     return (
         <div>
-            {props.name}
+            <h1>{user.name}</h1>
+            <h1>{user.age}</h1>
         </div>
     );
 };
